@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-Inode_modules/nan, -I/home/andrei/dev-tools/node-headers/include/node]

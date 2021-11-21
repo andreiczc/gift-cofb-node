@@ -1,0 +1,4 @@
+-I
+node_modules/nan
+-I
+/home/andrei/school/dev-tools/node-headers/include/node

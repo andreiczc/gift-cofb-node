@@ -1,0 +1,20 @@
+{
+  "name": "node-gyp-test",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "build:dev": "node-gyp -j 16 build --debug",
+    "build": "node-gyp -j 16 build",
+    "rebuild:dev": "node-gyp -j 16 rebuild --debug",
+    "rebuild": "node-gyp -j 16 rebuild",
+    "clean": "node-gyp clean"
+  },
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.9",
+    "eslint": "^8.3.0"
+  }
+}
