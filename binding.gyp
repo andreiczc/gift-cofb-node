@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "addon",
+      "target_name": "gift-cofb",
       "sources": [
         "src/addon.cpp",
         "src/cipher.cpp",

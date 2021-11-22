@@ -5,4 +5,6 @@
 
 NAN_METHOD(Encrypt);
 
+NAN_METHOD(Decrypt);
+
 #endif // _WRAPPER_HPP

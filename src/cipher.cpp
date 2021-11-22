@@ -19,3 +19,18 @@ std::unique_ptr<byte[]> encrypt(const byte *plaintext,
 
   return result;
 }
+
+std::unique_ptr<byte[]> decrypt(const byte *ciphertext,
+                                const size_t ciphertextLength,
+                                const byte *additionalData,
+                                const size_t additionalDataLength,
+                                const byte *nonce, const byte *key) {
+  auto result =
+      std::unique_ptr<byte[]>(new byte[ciphertextLength - BLOCK_SIZE]);
+  auto resultSize = 0ull;
+
+  crypto_aead_decrypt(result.get(), &resultSize, ciphertext, ciphertextLength,
+                      additionalData, additionalDataLength, nonce, key);
+
+  return result;
+}

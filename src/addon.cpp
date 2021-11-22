@@ -10,6 +10,9 @@ using v8::String;
 NAN_MODULE_INIT(InitAll) {
   Set(target, New<String>("encrypt").ToLocalChecked(),
       GetFunction(New<FunctionTemplate>(Encrypt)).ToLocalChecked());
+
+  Set(target, New<String>("decrypt").ToLocalChecked(),
+      GetFunction(New<FunctionTemplate>(Decrypt)).ToLocalChecked());
 }
 
 NODE_MODULE(addon, InitAll)
